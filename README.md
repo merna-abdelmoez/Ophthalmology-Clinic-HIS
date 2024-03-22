@@ -1,4 +1,4 @@
-# Ophthalmology Clinic Information System
+# OptiCare Connect: Ophthalmology Clinic Information System
 
 ## Technologies Used
 - **MongoDB:** NoSQL database for storing patient records, appointment data, billing information, and inventory details.
