@@ -66,3 +66,5 @@ exports.deleteAppointment = async (req, res, next) => {
         });
     }
 };
+
+exports.getAppointment = async (req, res, next) => {}
