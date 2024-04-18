@@ -12,9 +12,11 @@ app.use((req, res, next) => {
 }); 
 
 const patientRouter = require('./routes/patientRoutes');
-const doctorRouter = require('./routes/userRoutes');
+// const doctorRouter = require('./routes/userRoutes');
+const appointmentRouter = require('./routes/appointmentRoutes');
 
 app.use('/api/v1/patients', patientRouter);
 // app.use('/api/v1/doctors', doctorRouter);
+app.use('/api/v1/appointments', appointmentRouter);
 
 module.exports = app;

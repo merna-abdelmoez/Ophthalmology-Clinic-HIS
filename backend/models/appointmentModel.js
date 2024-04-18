@@ -1,8 +1,4 @@
 const mongoose = require('mongoose');
-const slugify = require('slugify')
-const jwt = require('jsonwebtoken');
-const crypto = require('crypto');
-const bcrypt = require('bcryptjs');
 const validator= require('validator');
 
 const appointmentSchema = new mongoose.Schema({
@@ -18,16 +14,48 @@ const appointmentSchema = new mongoose.Schema({
         type: String,
         required: true,
     },
-    data :{
+    date: {
         type: Date,
         required: true,
-        validate:{ 
-            validator:function(data){
-                return data > Date.now();
-            },
+    },
+    status: {
+        type: String,
+        enum: ['scheduled', 'cancelled', 'completed'],
+        default: 'scheduled'
+    },
+    payment: {
+        amount: {
+            type: Number,
+            required: true,
+        },
+        method: {
+            type: String,
+            required: true,
         }
     },
 });
-const Appointment = mongoose.model('Service',appointmentSchema);
+
+const Appointment = mongoose.model('Appointment', appointmentSchema);
 
 module.exports = Appointment;
+
+async function saveTestapp() {
+    try {
+        const testapp = new Appointment({
+            patientId: '321',
+            doctorId: '1818',
+            serviceId: 'check',
+            date: '12',
+            status: 'scheduled',
+            payment: {
+                amount: 100, 
+                method: 'credit card' 
+            }
+        });
+        const savedAppointment = await testapp.save(); // Corrected
+        console.log('Appointment saved successfully:', savedAppointment);
+    } catch (error) {
+        console.error('Error saving appointment:', error);
+    }
+}
+
