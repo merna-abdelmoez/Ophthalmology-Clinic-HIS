@@ -41,14 +41,15 @@ var routes = [
     path: "/maps",
     name: "Doctors",
     icon: "ni ni-badge",
-    component: <Maps />,
+    component: <Profile />,
     layout: "/admin",
+   
   },
   {
-    path: "/user-profile",
+    path: "/Appointments",
     name: "Appointment",
     icon: "ni ni-calendar-grid-58",
-    component: <Profile />,
+    component: <Tables />,
     layout: "/admin",
   },
   {
@@ -62,8 +63,8 @@ var routes = [
     path: "/login",
     name: "Payment",
     icon: "ni ni-money-coins",
-    component: <Login />,
-    layout: "/auth",
+    component: <Tables/>,
+    layout: "/admin",
   },
  
 ];
