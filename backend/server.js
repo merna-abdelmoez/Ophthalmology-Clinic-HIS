@@ -1,32 +1,28 @@
-const express = require('express');
-// const dotenv = require('dotenv');
-const app = require('./app');
-require('dotenv').config(); // Load environment variables from .env file
+const express = require("express");
+const errorDealer = require("./middleware/errorDealer");
+const connectDb = require("./config/dbConnection");
+const cors = require("cors");
+// const errorHandler = require("./middleware/errorhandler");
+// const errorDealer = require("./middleware/errorDealer");
+const dotenv = require("dotenv").config()
 
-const mongoose = require('mongoose');
-const DB = 'mongodb+srv://zhazem:hazem1234567@cluster14.w4oofyw.mongodb.net/';
-console.log(DB);
+connectDb();
+const app = express()
+app.use(cors());
 
+const port = process.env.PORT || 5000
 
-mongoose.connect(DB, { 
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-    // useCreateIndex: true,
-    // useFindAndModify: false,
+app.use(express.json())
+app.use('/api/doctors', require("./routes/doctorRoute"))
+const patientRouter = require('./routes/patientRoutes');
+// const doctorRouter = require('./routes/userRoutes');
+const appointmentRouter = require('./routes/appointmentRoutes');
 
-  })
-  .then(() => {
-    console.log('db connection successfully');
-  }).catch(error => {
-    console.error('🔥🔥 Error connecting to MongoDB:', error);
-  });
-const port = 3000 ; 
-const server = app.listen (port,()=>{
-    console.log(`App is running on port ${port}...`);
-});
-process.on('unhandledRejection', (err) => {
-    console.log(err.message,err.name);
-    // server.close(()=>{
-    //   process.exit(1);
-    // });  
-    });   
+app.use('/api/v1/patients', patientRouter);
+// app.use('/api/v1/doctors', doctorRouter);
+app.use('/api/v1/appointments', appointmentRouter);   
+app.use(errorDealer)
+
+app.listen(port,()=>{
+    console.log("server sha8al ya ");
+})
