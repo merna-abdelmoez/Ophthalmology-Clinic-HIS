@@ -37,7 +37,7 @@ var routes = [
     layout: "/admin",
   },
   {
-    path: "/tables",
+    path: "/Prescription",
     name: "Prescription",
     icon: "ni ni-single-copy-04",
     component: <Tables />,
