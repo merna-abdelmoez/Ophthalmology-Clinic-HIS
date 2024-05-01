@@ -49,19 +49,18 @@ const Tables = () => {
                   <tr>
                     <th scope="row">
                       <Media className="align-items-center">
-                        <a
-                          className="avatar rounded-circle mr-3"
-                          href="#pablo"
-                          onClick={(e) => e.preventDefault()}
-                        >
-                          <img
-                            alt="..."
-                            src={require("../../assets/img/theme/bootstrap.jpg")}
-                          />
-                        </a>
+                        {/*<a*/}
+                        {/*  className="avatar rounded-circle mr-3"*/}
+                        {/*  href="#pablo"*/}
+                        {/*  onClick={(e) => e.preventDefault()>*/}
+                        {/*  <img*/}
+                        {/*    alt="..."*/}
+                        {/*    src={require("../../assets/img/theme/bootstrap.jpg")}*/}
+                        {/*  />*/}
+                        {/*</a>*/}
                         <Media>
                           <span className="mb-0 text-sm">
-                            Argon Design System
+                           22/5/2024
                           </span>
                         </Media>
                       </Media>
@@ -200,19 +199,9 @@ const Tables = () => {
                   <tr>
                     <th scope="row">
                       <Media className="align-items-center">
-                        <a
-                          className="avatar rounded-circle mr-3"
-                          href="#pablo"
-                          onClick={(e) => e.preventDefault()}
-                        >
-                          <img
-                            alt="..."
-                            src={require("../../assets/img/theme/angular.jpg")}
-                          />
-                        </a>
                         <Media>
                           <span className="mb-0 text-sm">
-                            Angular Now UI Kit PRO
+                            3/6/2024
                           </span>
                         </Media>
                       </Media>
@@ -291,18 +280,8 @@ const Tables = () => {
                   <tr>
                     <th scope="row">
                       <Media className="align-items-center">
-                        <a
-                          className="avatar rounded-circle mr-3"
-                          href="#pablo"
-                          onClick={(e) => e.preventDefault()}
-                        >
-                          <img
-                            alt="..."
-                            src={require("../../assets/img/theme/sketch.jpg")}
-                          />
-                        </a>
                         <Media>
-                          <span className="mb-0 text-sm">Black Dashboard</span>
+                          <span className="mb-0 text-sm">4/6/2024</span>
                         </Media>
                       </Media>
                     </th>
@@ -379,19 +358,9 @@ const Tables = () => {
                   <tr>
                     <th scope="row">
                       <Media className="align-items-center">
-                        <a
-                          className="avatar rounded-circle mr-3"
-                          href="#pablo"
-                          onClick={(e) => e.preventDefault()}
-                        >
-                          <img
-                            alt="..."
-                            src={require("../../assets/img/theme/react.jpg")}
-                          />
-                        </a>
                         <Media>
                           <span className="mb-0 text-sm">
-                            React Material Dashboard
+                            4/6/2024
                           </span>
                         </Media>
                       </Media>
@@ -469,19 +438,9 @@ const Tables = () => {
                   <tr>
                     <th scope="row">
                       <Media className="align-items-center">
-                        <a
-                          className="avatar rounded-circle mr-3"
-                          href="#pablo"
-                          onClick={(e) => e.preventDefault()}
-                        >
-                          <img
-                            alt="..."
-                            src={require("../../assets/img/theme/vue.jpg")}
-                          />
-                        </a>
                         <Media>
                           <span className="mb-0 text-sm">
-                            Vue Paper UI Kit PRO
+                            6/6/2024
                           </span>
                         </Media>
                       </Media>
