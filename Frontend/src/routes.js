@@ -48,7 +48,14 @@ var routes = [
     name: "Payment",
     icon: "ni ni-money-coins",
     component: <Tables/>,
-    layout: "/admin",
+    layout: "/auth",
+  },
+  {
+    path: "/login",
+    name: "",
+    icon: "",
+    component: <Login/>,
+    layout: "/auth",
   },
  
 ];
