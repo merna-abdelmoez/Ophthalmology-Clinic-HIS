@@ -67,4 +67,17 @@ exports.deleteAppointment = async (req, res, next) => {
     }
 };
 
-exports.getAppointment = async (req, res, next) => {}
+exports.getAppointment = async (req, res, next) => {try {
+    const appointments = await Appointment.findById(req.params.id); 
+    res.status(200).json({
+        status: 'success',
+        data: {
+            appointments
+        }
+    });
+} catch (err) {
+    res.status(500).json({
+        status: 'error',
+        message: err.message
+    });
+}}
