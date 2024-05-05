@@ -5,6 +5,7 @@ import Maps from "views/examples/Maps.js";
 import Login from "views/examples/Login.js";
 import Tables from "views/examples/Tables.js";
 import Icons from "views/examples/Icons.js";
+import AppProfile from "views/examples/AppointmentCreate";
 
 var routes = [
   {
@@ -50,6 +51,14 @@ var routes = [
     component: <Tables/>,
     layout: "/admin",
   },
+  {
+    path: "/CreateAppointment",
+    name: "",
+    icon: "",
+    component: <AppProfile/>,
+    layout: "/admin",
+  },
+ 
   {
     path: "/login",
     name: "",
