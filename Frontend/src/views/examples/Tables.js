@@ -37,7 +37,6 @@ const Tables = () => {
               <Table className="align-items-center table-flush" responsive>
                 <thead className="thead-light">
                   <tr>
-                    <th scope="col">Service Id</th>
                     <th scope="col">Appointment Date</th>
                     <th scope="col">Billing invoice</th>
                     <th scope="col">Status</th>
@@ -61,12 +60,11 @@ const Tables = () => {
                         {/*</a>*/}
                         <Media>
                           <span className="mb-0 text-sm">
-                           1
+                           22/5/2024
                           </span>
                         </Media>
                       </Media>
                     </th>
-                    <td>22/5/2024</td>
                     <td>$2,500 USD</td>
                     <td>
                       <Badge color="" className="badge-dot mr-4">
@@ -203,12 +201,11 @@ const Tables = () => {
                       <Media className="align-items-center">
                         <Media>
                           <span className="mb-0 text-sm">
-                           2
+                            3/6/2024
                           </span>
                         </Media>
                       </Media>
                     </th>
-                    <td>3/6/2024</td>
                     <td>$1,800 USD</td>
                     <td>
                       <Badge color="" className="badge-dot">
@@ -284,11 +281,10 @@ const Tables = () => {
                     <th scope="row">
                       <Media className="align-items-center">
                         <Media>
-                          <span className="mb-0 text-sm">3</span>
+                          <span className="mb-0 text-sm">4/6/2024</span>
                         </Media>
                       </Media>
                     </th>
-                    <td>3/6/2024</td>
                     <td>$3,150 USD</td>
                     <td>
                       <Badge color="" className="badge-dot mr-4">
@@ -364,12 +360,11 @@ const Tables = () => {
                       <Media className="align-items-center">
                         <Media>
                           <span className="mb-0 text-sm">
-                            4
+                            4/6/2024
                           </span>
                         </Media>
                       </Media>
                     </th>
-                    <td>4/6/2024</td>
                     <td>$4,400 USD</td>
                     <td>
                       <Badge color="" className="badge-dot">
@@ -445,12 +440,11 @@ const Tables = () => {
                       <Media className="align-items-center">
                         <Media>
                           <span className="mb-0 text-sm">
-                            5
+                            6/6/2024
                           </span>
                         </Media>
                       </Media>
                     </th>
-                    <td>8/6/2024</td>
                     <td>$2,200 USD</td>
                     <td>
                       <Badge color="" className="badge-dot mr-4">
@@ -526,7 +520,7 @@ const Tables = () => {
               </Table>
               <CardFooter className="py-4">
                 <nav aria-label="...">
-                  <Pagination
+                  {/* <Pagination
                     className="pagination justify-content-end mb-0"
                     listClassName="justify-content-end mb-0"
                   >
@@ -573,7 +567,7 @@ const Tables = () => {
                         <span className="sr-only">Next</span>
                       </PaginationLink>
                     </PaginationItem>
-                  </Pagination>
+                  </Pagination> */}
                 </nav>
               </CardFooter>
             </Card>

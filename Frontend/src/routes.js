@@ -5,7 +5,7 @@ import Maps from "views/examples/Maps.js";
 import Login from "views/examples/Login.js";
 import Tables from "views/examples/Tables.js";
 import Icons from "views/examples/Icons.js";
-import AppProfile from "views/examples/AppointmentCreate";
+import DoctorCreateProfile from "views/examples/DoctorCreateProfile";
 
 var routes = [
   {
@@ -26,27 +26,16 @@ var routes = [
     path: "/Doctors",
     name: "Doctors",
     icon: "ni ni-badge",
-    component: <Profile />,
+    component: <DoctorCreateProfile />,
     layout: "/admin",
    
   },
   {
+    path: "/Appointments",
     name: "Appointment",
     icon: "ni ni-calendar-grid-58",
-    children: [
-      {
-        name: "Create Appointment",
-        path: "/CreateAppointment",
-        icon:"ni ni-bold-right",
-        component: <AppProfile/>,
-        layout: "/admin",
-      },
-     { name: "View Appointments",
-     path:"/Appointments",
-     icon: "ni ni-bold-right",
-     component: <Tables />,
-     layout: "/admin",},
-    ]
+    component: <Tables />,
+    layout: "/admin",
   },
   {
     path: "/Prescription",
@@ -62,7 +51,6 @@ var routes = [
     component: <Tables/>,
     layout: "/admin",
   },
- 
   {
     path: "/login",
     name: "",
@@ -70,18 +58,6 @@ var routes = [
     component: <Login/>,
     layout: "/auth",
   },
-  {
-    name: "",
-    path: "/CreateAppointment",
-    component: <AppProfile/>,
-    layout: "/admin",},
-    {
-      path: "/Appointments",
-      name: "",
-      component: <Tables/>,
-      layout: "/admin",
-    },
-
-  
+ 
 ];
 export default routes;

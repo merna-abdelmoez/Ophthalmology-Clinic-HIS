@@ -67,16 +67,4 @@ exports.deleteAppointment = async (req, res, next) => {
     }
 };
 
-exports.getAppointment = async (req, res, next) => {
-    const appointment = await Appointment.findById(req.params.id); 
-    if (!appointment){res.status(404);
-        throw new Error("Invalid Appointment");
-    }
-    res.status(200).json({
-        status: 'success',
-        data: {
-            appointment
-        }
-    });
-
-}
+exports.getAppointment = async (req, res, next) => {}
