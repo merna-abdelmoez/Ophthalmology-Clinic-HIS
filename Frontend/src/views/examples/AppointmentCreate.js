@@ -1,4 +1,4 @@
-
+import React, { useState } from 'react';
 
 // reactstrap components
 import {
@@ -14,9 +14,12 @@ import {
     Col,
   } from "reactstrap";
   // core components
+  import DatePicker from "react-datepicker"; // Import DatePicker
+  import "react-datepicker/dist/react-datepicker.css"; // Import DatePicker styles
   import AppHeader from "components/Headers/AppHeader.js";
   
   const AppProfile = () => {
+    const [selectedDate, setSelectedDate] = useState(null); 
     return (
       <>
         <AppHeader />
@@ -31,14 +34,7 @@ import {
                       <h3 className="mb-0">Appointment Scheduling</h3>
                     </Col>
                     <Col className="text-right" xs="4">
-                      <Button
-                        color="primary"
-                        href="#pablo"
-                        onClick={(e) => e.preventDefault()}
-                        size="sm"
-                      >
-                        Submit
-                      </Button>
+          
                     </Col>
                   </Row>
                 </CardHeader>
@@ -76,13 +72,25 @@ import {
                       <Row>
                       <Col lg="4">
                       <FormGroup>
-                      <label>Appointment Date</label>
+                      <label>Appointment Time</label>
                       <Input type="select" className="form-control-alternative">
                         <option>Select an option</option>
-                        <option>Option 1</option>
-                        <option>Option 2</option>
-                        <option>Option 3</option>
+                        <option>3 PM</option>
+                        <option>4 PM</option>
+                        <option>5 PM</option>
+                        <option>6 PM</option>
+                        <option>7 PM</option>
+                        <option>8 PM</option>
                       </Input>
+                    </FormGroup>
+                    <FormGroup>
+                          <label>Appointment Date</label>
+                          <br />
+                          <DatePicker
+                            selected={selectedDate} // Pass the selected date to DatePicker
+                            onChange={(date) => setSelectedDate(date)} // Update selectedDate state when date changes
+                            className="form-control" // Apply Bootstrap form-control class
+                          />
                     </FormGroup>
                     <FormGroup>
                       <label>Doctor Name:</label>
@@ -95,6 +103,15 @@ import {
                     </FormGroup>
                     </Col>
                     </Row>
+                    <Button
+                        color="primary"
+                        href="#pablo"
+                        onClick={(e) => e.preventDefault()}
+                        size="lg" // Increase button size to large
+                        className="float-right" // Align button to the left
+                      >
+                        Book
+                      </Button>
                     </div>
                   </Form>
                 </CardBody>

@@ -186,7 +186,7 @@ const AppTables = () => {
                             href="#pablo"
                             onClick={(e) => e.preventDefault()}
                           >
-                            Edit Appointment
+                            Approve Appointment
                           </DropdownItem>
                           <DropdownItem
                             href="#pablo"
@@ -268,7 +268,7 @@ const AppTables = () => {
                             href="#pablo"
                             onClick={(e) => e.preventDefault()}
                           >
-                            Edit Appointment
+                            Approve Appointment
                           </DropdownItem>
                           <DropdownItem
                             href="#pablo"
@@ -347,7 +347,7 @@ const AppTables = () => {
                             href="#pablo"
                             onClick={(e) => e.preventDefault()}
                           >
-                            Edit Appointment 
+                            Approve Appointment 
                           </DropdownItem>
                           <DropdownItem
                             href="#pablo"
@@ -428,7 +428,7 @@ const AppTables = () => {
                             href="#pablo"
                             onClick={(e) => e.preventDefault()}
                           >
-                            Edit Appointment
+                            Approve Appointment
                           </DropdownItem>
                           <DropdownItem
                             href="#pablo"
@@ -510,7 +510,7 @@ const AppTables = () => {
                             href="#pablo"
                             onClick={(e) => e.preventDefault()}
                           >
-                            Edit Appointment
+                            Approve Appointment
                           </DropdownItem>
                           <DropdownItem
                             href="#pablo"
