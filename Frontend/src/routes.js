@@ -31,11 +31,22 @@ var routes = [
    
   },
   {
-    path: "/Appointments",
     name: "Appointment",
     icon: "ni ni-calendar-grid-58",
-    component: <Tables />,
-    layout: "/admin",
+    children: [
+      {
+        name: "Create Appointment",
+        path: "/CreateAppointment",
+        icon:"ni ni-bold-right",
+        component: <AppProfile/>,
+        layout: "/admin",
+      },
+     { name: "View Appointments",
+     path:"/Appointments",
+     icon: "ni ni-bold-right",
+     component: <Tables />,
+     layout: "/admin",},
+    ]
   },
   {
     path: "/Prescription",
@@ -51,13 +62,6 @@ var routes = [
     component: <Tables/>,
     layout: "/admin",
   },
-  {
-    path: "/CreateAppointment",
-    name: "",
-    icon: "",
-    component: <AppProfile/>,
-    layout: "/admin",
-  },
  
   {
     path: "/login",
@@ -66,6 +70,18 @@ var routes = [
     component: <Login/>,
     layout: "/auth",
   },
- 
+  {
+    name: "",
+    path: "/CreateAppointment",
+    component: <AppProfile/>,
+    layout: "/admin",},
+    {
+      path: "/Appointments",
+      name: "",
+      component: <Tables/>,
+      layout: "/admin",
+    },
+
+  
 ];
 export default routes;
