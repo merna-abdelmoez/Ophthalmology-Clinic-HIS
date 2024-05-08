@@ -37,7 +37,11 @@ exports.createAppointment = async (req, res, next) => {
 
 exports.updateAppointment = async (req, res, next) => {
     try {
-        const updatedAppointment = await Appointment.findByIdAndUpdate(req.params.id);
+        const updatedAppointment = await Appointment.findByIdAndUpdate(
+            req.params.id,
+            { status: req.body.status }, // Update the status with the value from the request body
+            { new: true } // Return the updated document
+        );
         res.status(200).json({
             status: 'success',
             data: {
@@ -51,6 +55,7 @@ exports.updateAppointment = async (req, res, next) => {
         });
     }
 };
+
 
 exports.deleteAppointment = async (req, res, next) => {
     try {
