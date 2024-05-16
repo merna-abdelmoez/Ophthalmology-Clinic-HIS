@@ -4,8 +4,18 @@ import Profile from "views/examples/Profile.js";
 import Maps from "views/examples/Maps.js";
 import Login from "views/examples/Login.js";
 import Tables from "views/examples/Tables.js";
+import AppTables from "views/examples/AppTables.js";
 import Icons from "views/examples/Icons.js";
 import DoctorCreateProfile from "views/examples/DoctorCreateProfile";
+import PatientCreateHeader from "./components/Headers/PatientCreateHeader";
+import PatientTable from "views/examples/PatientTable";
+import PatientCreateProfile from "views/examples/PatientCreateProfile";
+import PatientProfile from "./views/examples/PatientProfile";
+import {Route} from "react-router-dom";
+import AppProfile from "views/examples/AppointmentCreate";
+// import DoctorCreateProfile from "views/examples/DoctorCreateProfile";
+import DoctorTable from "./views/examples/DoctorTable";
+import DoctorSeeProfile from "views/examples/DoctorSeeProfile";
 
 var routes = [
   {
@@ -15,27 +25,48 @@ var routes = [
     component: <Index />,
     layout: "/admin",
   },
+
   {
     path: "/Patients",
     name: "Patients",
     icon: "ni ni-ambulance",
-    component: <Tables />,
+    component: <PatientTable />,
     layout: "/admin",
   },
+
+
+  
   {
-    path: "/Doctors",
-    name: "Doctors",
+    path: "/CreateDoctor",
+    name: "Create Doctor",
     icon: "ni ni-badge",
     component: <DoctorCreateProfile />,
     layout: "/admin",
-   
   },
   {
-    path: "/Appointments",
+    path: "/Doctorslist",
+    name: "Doctors List",
+    icon: "ni ni-badge",
+    component: <DoctorTable />,
+    layout: "/admin",
+  },
+  {
     name: "Appointment",
     icon: "ni ni-calendar-grid-58",
-    component: <Tables />,
-    layout: "/admin",
+    children: [
+      {
+        name: "Create Appointment",
+        path: "/CreateAppointment",
+        icon:"ni ni-bold-right",
+        component: <AppProfile/>,
+        layout: "/admin",
+      },
+     { name: "View Appointments",
+     path:"/Appointments",
+     icon: "ni ni-bold-right",
+     component: <AppTables />,
+     layout: "/admin",},
+    ]
   },
   {
     path: "/Prescription",
@@ -58,6 +89,41 @@ var routes = [
     component: <Login/>,
     layout: "/auth",
   },
+  {
+    path: "/PatientsCreate",
+    component: <PatientCreateProfile type={"Create"} />,
+    layout: "/admin",
+  },
+  {
+    path: "/PatientsUpdate",
+    component: <PatientCreateProfile type={"Update"} />,
+    layout: "/admin",
+  },
+  {
+    path: "/Patients/:id",
+    component: <PatientProfile/>,
+    layout: "/admin",
+  },
+  // {<Route path="/admin/Patients/:id" element={<PatientProfile/> }/> }
+
+
+  { name: "",
+    path: "/CreateAppointment",
+    component: <AppProfile/>,
+    layout: "/admin",},
+    {
+      path: "/Appointments",
+      name: "",
+      component: <AppTables/>,
+      layout: "/admin",
+    },
+    {
+      path: "/SeeDoctor/*",
+      name: "",
+      icon: "",
+      component: <DoctorSeeProfile />,  //sheel el arraf da lama te32al we 3adel fe file index.js
+      layout: "/admin",
+    },
  
 ];
 export default routes;

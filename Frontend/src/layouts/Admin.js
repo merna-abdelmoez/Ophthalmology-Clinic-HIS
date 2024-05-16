@@ -7,6 +7,7 @@ import { Container } from "reactstrap";
 import AdminNavbar from "components/Navbars/AdminNavbar.js";
 import AdminFooter from "components/Footers/AdminFooter.js";
 import Sidebar from "components/Sidebar/Sidebar.js";
+import Chatbot from "components/Footers/chatbot.js";
 
 import routes from "routes.js";
 
@@ -62,7 +63,8 @@ const Admin = (props) => {
         />
         <Routes>
           {getRoutes(routes)}
-          <Route path="*" element={<Navigate to="/admin/index" replace />} />
+          {/* mmkn ne7tag neuse el ta7t not sure bs hatedrab lw 7aetnaha mawdoo3 el ids */}
+          {/* <Route path="*" element={<Navigate to="/admin/index" replace />} /> */}  
         </Routes>
         <Container fluid>
           <AdminFooter />
