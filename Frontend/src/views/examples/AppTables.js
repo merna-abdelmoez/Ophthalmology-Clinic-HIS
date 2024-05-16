@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import { Link } from 'react-router-dom';
+import { Button } from "reactstrap";
 import {
   Badge,
   Card,
@@ -17,18 +19,23 @@ import {
   Table,
   Container,
   Row,
+  Col,
   UncontrolledTooltip,
 } from 'reactstrap';
-import Header from 'components/Headers/Header';
+import AppTableHeader from "components/Headers/AppTableHeader";
+
 
 const AppTables = () => {
   const [appointments, setAppointments] = useState([]);
+  const [totalAppointments, setTotalAppointments] = useState(0);
 
   useEffect(() => {
+    
     const fetchAppointments = async () => {
       try {
         const response = await axios.get('http://localhost:5001/api/v1/appointments');
         setAppointments(response.data.data.appointments);
+        setTotalAppointments(response.data.data.appointments.length);
       } catch (error) {
         console.error('Error fetching appointments:', error);
       }
@@ -63,17 +70,43 @@ const AppTables = () => {
       console.error('Error canceling appointment:', error);
     }
   };
+  const handleDeleteAppointment = async (id) => {
+    try {
+      const response = await axios.delete(`http://localhost:5001/api/v1/appointments/${id}`);
+      if (response.status === 204) {
+        const updatedAppointments = appointments.filter(appointment => appointment._id !== id);
+        alert("Appointment successfully deleted.");
+        setAppointments(updatedAppointments);
+        window.location.reload();
+       
+
+      }
+    } catch (error) {
+      alert("Failed to delete Appointment.");
+      console.error('Error deleting appointment:', error);
+    }
+  };
+
 
   return (
     <>
-      <Header />
+      <AppTableHeader />
       <Container className="mt--7" fluid>
         <Row>
           <div className="col">
             <Card className="shadow">
-              <CardHeader className="border-0">
-                <h3 className="mb-0">Appointments Schedule</h3>
-              </CardHeader>
+               <CardHeader className="border-0">
+      <Row className="align-items-center">
+        <Col>
+          <h3 className="mb-0">Appointments Schedule</h3>
+        </Col>
+        <Col className="text-right">
+          <Link to="/admin/CreateAppointment">
+            <Button color="primary">Add Appointment</Button>
+          </Link>
+        </Col>
+      </Row>
+    </CardHeader>
               <Table className="align-items-center table-flush" responsive>
                 <thead className="thead-light">
                   <tr>
@@ -133,6 +166,18 @@ const AppTables = () => {
                             <DropdownItem href="#pablo" onClick={() => handleCancelAppointment(appointment._id)}>
                               Cancel Appointment
                             </DropdownItem>
+                            <DropdownItem href="#pablo" onClick={() => handleDeleteAppointment(appointment._id)}>
+                              Delete Appointment
+                            </DropdownItem>
+                            <Link to={{
+                                  pathname: '/admin/CreateAppointment',
+                                  state: { appointmentId: appointment._id }
+                                }}
+                              >
+                                <DropdownItem>
+                                  Update Appointment
+                                </DropdownItem>
+                              </Link>
                           </DropdownMenu>
                         </UncontrolledDropdown>
                       </td>
