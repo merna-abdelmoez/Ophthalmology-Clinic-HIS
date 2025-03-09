@@ -80,28 +80,52 @@ To access the system, navigate to `localhost:3000` in your web browser. Use the 
 ## Contributing
 Gratitude goes out to all team members for their valuable contributions to this project.
 
-<div align="left">
-  <a href="https://github.com/Habiba-Mohsen">
-      <img src="https://github.com/Habiba-Mohsen.png" width="100px" alt="@Habiba-Mohsen">
-    </a>
-    <a href="https://github.com/merna-abdelmoez">
-    <img src="https://github.com/merna-abdelmoez.png" width="100px" alt="@merna-abdelmoez">
-  </a>
-    <a href="https://github.com/hanaheshamm">
-      <img src="https://github.com/hanaheshamm.png" width="100px" alt="@hanaheshamm">
-    </a>
-   <a href="https://github.com/hazemzakariasaad">
-      <img src="https://github.com/hazemzakariasaad.png" width="100px" alt="@hazemzakariasaad">
-    </a>
-    <a href="https://github.com/KhaledBadr07">
-      <img src="https://github.com/KhaledBadr07.png" width="100px" alt="@KhaledBadr07">
-    </a>
-      <a href="https://github.com/abdallahahmed11">
-      <img src="https://github.com/abdallahahmed11.png" width="100px" alt="@abdallahahmed11">
-    </a>
+<table style="width: 100%; border-spacing: 10px;">
+  <tr>
+    <td align="center">
+      <a href="https://github.com/Habiba-Mohsen">
+        <img src="https://github.com/Habiba-Mohsen.png" width="100px" alt="@Habiba-Mohsen">
+        <br>
+        <sub><b>Habiba Mohsen</b></sub>
       </a>
-      
-</div>
+    </td>
+    <td align="center">
+      <a href="https://github.com/merna-abdelmoez">
+        <img src="https://github.com/merna-abdelmoez.png" width="100px" alt="@merna-abdelmoez">
+        <br>
+        <sub><b>Merna Abdelmoez</b></sub>
+      </a>
+    </td>
+    <td align="center">
+      <a href="https://github.com/hanaheshamm">
+        <img src="https://github.com/hanaheshamm.png" width="100px" alt="@hanaheshamm">
+        <br>
+        <sub><b>Hana Hesham</b></sub>
+      </a>
+    </td>
+    <td align="center">
+      <a href="https://github.com/hazemzakariasaad">
+        <img src="https://github.com/hazemzakariasaad.png" width="100px" alt="@hazemzakariasaad">
+        <br>
+        <sub><b>Hazem Zakaria Saad</b></sub>
+      </a>
+    </td>
+    <td align="center">
+      <a href="https://github.com/KhaledBadr07">
+        <img src="https://github.com/KhaledBadr07.png" width="100px" alt="@KhaledBadr07">
+        <br>
+        <sub><b>Khaled Badr</b></sub>
+      </a>
+    </td>
+    <td align="center">
+      <a href="https://github.com/abdallahahmed11">
+        <img src="https://github.com/abdallahahmed11.png" width="100px" alt="@abdallahahmed11">
+        <br>
+        <sub><b>Abdallah Ahmed</b></sub>
+      </a>
+    </td>
+  </tr>
+</table>
 
 
 ## License
