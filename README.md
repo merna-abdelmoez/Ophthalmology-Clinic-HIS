@@ -1,5 +1,8 @@
 # Ophthalmology Clinic Information System (OCIS)
-![logo](assets/opticare.png)
+<p align="center">
+  <img src="assets/opticare.png" alt="logo">
+</p>
+
 ## Overview
 The Ophthalmology Clinic Information System (OCIS) is a specialized software solution tailored to enhance operational efficiency in ophthalmology clinics. The system manages patient records, appointments, billing, and inventory efficiently and securely using the MERN stack (MongoDB, Express.js, React, and Node.js). This powerful technology stack ensures a robust, scalable, and interactive application that meets the complex needs of modern healthcare facilities.
 
@@ -80,46 +83,46 @@ To access the system, navigate to `localhost:3000` in your web browser. Use the 
 ## Contributing
 Gratitude goes out to all team members for their valuable contributions to this project.
 
-<table style="width: 100%; border-spacing: 10px;">
+<table style="width: 150%; border-spacing: 10px;">
   <tr>
     <td align="center">
       <a href="https://github.com/Habiba-Mohsen">
-        <img src="https://github.com/Habiba-Mohsen.png" width="100px" alt="@Habiba-Mohsen">
+        <img src="https://github.com/Habiba-Mohsen.png" width="150px" alt="@Habiba-Mohsen">
         <br>
         <sub><b>Habiba Mohsen</b></sub>
       </a>
     </td>
     <td align="center">
       <a href="https://github.com/merna-abdelmoez">
-        <img src="https://github.com/merna-abdelmoez.png" width="100px" alt="@merna-abdelmoez">
+        <img src="https://github.com/merna-abdelmoez.png" width="150px" alt="@merna-abdelmoez">
         <br>
         <sub><b>Merna Abd ElMoez</b></sub>
       </a>
     </td>
     <td align="center">
       <a href="https://github.com/hanaheshamm">
-        <img src="https://github.com/hanaheshamm.png" width="100px" alt="@hanaheshamm">
+        <img src="https://github.com/hanaheshamm.png" width="150px" alt="@hanaheshamm">
         <br>
         <sub><b>Hana Hesham</b></sub>
       </a>
     </td>
     <td align="center">
       <a href="https://github.com/hazemzakariasaad">
-        <img src="https://github.com/hazemzakariasaad.png" width="100px" alt="@hazemzakariasaad">
+        <img src="https://github.com/hazemzakariasaad.png" width="150px" alt="@hazemzakariasaad">
         <br>
         <sub><b>Hazem Zakaria </b></sub>
       </a>
     </td>
     <td align="center">
       <a href="https://github.com/KhaledBadr07">
-        <img src="https://github.com/KhaledBadr07.png" width="100px" alt="@KhaledBadr07">
+        <img src="https://github.com/KhaledBadr07.png" width="150px" alt="@KhaledBadr07">
         <br>
         <sub><b>Khaled Badr</b></sub>
       </a>
     </td>
     <td align="center">
       <a href="https://github.com/abdallahahmed11">
-        <img src="https://github.com/abdallahahmed11.png" width="100px" alt="@abdallahahmed11">
+        <img src="https://github.com/abdallahahmed11.png" width="150px" alt="@abdallahahmed11">
         <br>
         <sub><b>Abdallah Ahmed</b></sub>
       </a>
