@@ -93,7 +93,7 @@ Gratitude goes out to all team members for their valuable contributions to this 
       <a href="https://github.com/merna-abdelmoez">
         <img src="https://github.com/merna-abdelmoez.png" width="100px" alt="@merna-abdelmoez">
         <br>
-        <sub><b>Merna Abdelmoez</b></sub>
+        <sub><b>Merna Abd ElMoez</b></sub>
       </a>
     </td>
     <td align="center">
@@ -107,7 +107,7 @@ Gratitude goes out to all team members for their valuable contributions to this 
       <a href="https://github.com/hazemzakariasaad">
         <img src="https://github.com/hazemzakariasaad.png" width="100px" alt="@hazemzakariasaad">
         <br>
-        <sub><b>Hazem Zakaria Saad</b></sub>
+        <sub><b>Hazem Zakaria </b></sub>
       </a>
     </td>
     <td align="center">
