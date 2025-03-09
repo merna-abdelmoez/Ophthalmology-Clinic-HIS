@@ -57,7 +57,7 @@ python chatbot.py
 
 To access the system, navigate to `localhost:3000` in your web browser. Use the login credentials provided by your system administrator to access the different functionalities based on your role (Admin, Doctor, Patient).
 
-## Screenshots
+## Website
 
 ### Login Page
 ![Login Page](assets/loginpng.png)
