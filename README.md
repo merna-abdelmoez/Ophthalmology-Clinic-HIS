@@ -28,7 +28,7 @@ The Ophthalmology Clinic Information System (OCIS) is a specialized software sol
 To set up the project locally, follow these steps:
 
 1. Clone the repository:
-git clone https://github.com/merna_abdelmoez/Opticare-connect
+git clone https://github.com/merna-abdelmoez/Opticare-connect
 ### Install Backend Dependencies
 Navigate to the backend directory and install the necessary dependencies.
 cd backend
